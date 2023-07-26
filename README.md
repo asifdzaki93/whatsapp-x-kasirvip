@@ -52,7 +52,7 @@ Tentu bisa! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi What
 
 **Persyaratan:**
 
-1. Instal Node.js: [Tautan Download](https://nodejs.org/en/download/)
+1. Instal Node.js: [Tautan Download](https://nodejs.org/en/download/) pilih versi 14
 2. Instal XAMPP: [Tautan Download](https://www.apachefriends.org/download.html)
 
 **Langkah-langkah:**
