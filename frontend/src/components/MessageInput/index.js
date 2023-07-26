@@ -20,6 +20,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import MicIcon from "@material-ui/icons/Mic";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 import {
   FormControlLabel,
   Hidden,
@@ -30,12 +31,15 @@ import {
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 import { i18n } from "../../translate/i18n";
+import ProductDialog from "../ProductDialog";
 import api from "../../services/api";
 import RecordingTimer from "./RecordingTimer";
 import { ReplyMessageContext } from "../../context/ReplyingMessage/ReplyingMessageContext";
 import { AuthContext } from "../../context/Auth/AuthContext";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import toastError from "../../errors/toastError";
+
+
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -452,6 +456,14 @@ const MessageInput = ({ ticketStatus }) => {
         {replyingMessage && renderReplyingMessage(replyingMessage)}
         <div className={classes.newMessageBox}>
           <Hidden only={["sm", "xs"]}>
+
+
+          <div>
+            <ProductDialog inputMessage={inputMessage} setInputMessage={setInputMessage} />
+          </div>
+
+
+
             <IconButton
               aria-label="emojiPicker"
               component="span"
@@ -515,6 +527,18 @@ const MessageInput = ({ ticketStatus }) => {
             >
               <MoreVert></MoreVert>
             </IconButton>
+
+
+
+
+            <div>
+              <ProductDialog inputMessage={inputMessage} setInputMessage={setInputMessage} />
+              {/* <textarea value={inputMessage} readOnly /> */}
+            </div>
+
+
+
+            
             <Menu
               id="simple-menu"
               keepMounted

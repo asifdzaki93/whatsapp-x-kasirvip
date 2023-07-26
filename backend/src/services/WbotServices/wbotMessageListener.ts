@@ -149,7 +149,7 @@ const verifyMessage = async (
     quotedMsgId: quotedMsg?.id
   };
 
-  await ticket.update({ lastMessage: msg.type === "location" ? msg.location.description ? "Localization - " + msg.location.description.split('\\n')[0] : "Localization" : msg.body });
+  await ticket.update({ lastMessage: msg.type === "location" ? msg.location.description ? "Lokasi - " + msg.location.description.split('\\n')[0] : "Lokasi" : msg.body });
 
   await CreateMessageService({ messageData });
 };

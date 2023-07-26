@@ -108,6 +108,16 @@ const Dashboard = () => {
 							<Chart />
 						</Paper>
 					</Grid>
+					<Grid item xs={4}>
+						<Paper className={classes.fixedHeightPaper}>
+xxxxxxxxxxxxxx
+						</Paper>
+					</Grid>
+					<Grid item xs={8}>
+						<Paper className={classes.fixedHeightPaper}>
+xxxxxxxxxxxxxx
+						</Paper>
+					</Grid>
 				</Grid>
 			</Container>
 		</div>

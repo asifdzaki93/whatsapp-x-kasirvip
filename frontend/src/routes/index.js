@@ -10,6 +10,12 @@ import Login from "../pages/Login/";
 import Connections from "../pages/Connections/";
 import Settings from "../pages/Settings/";
 import Users from "../pages/Users";
+
+import KasirVip from "../pages/KasirVip";
+import Penjualan from "../pages/Penjualan";
+import Test from "../pages/Test";
+
+
 import Contacts from "../pages/Contacts/";
 import QuickAnswers from "../pages/QuickAnswers/";
 import Queues from "../pages/Queues/";
@@ -41,6 +47,9 @@ const Routes = () => {
               />
               <Route exact path="/contacts" component={Contacts} isPrivate />
               <Route exact path="/users" component={Users} isPrivate />
+              <Route exact path="/KasirVip" component={KasirVip} isPrivate />
+              <Route exact path="/Penjualan" component={Penjualan} isPrivate />
+              <Route exact path="/Test" component={Test} isPrivate />
               <Route
                 exact
                 path="/quickAnswers"

@@ -15,6 +15,8 @@ import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
 import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
 import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
 import QuestionAnswerOutlinedIcon from "@material-ui/icons/QuestionAnswerOutlined";
+import StoreMallDirectoryIcon from '@material-ui/icons/StoreMallDirectory';
+import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 
 import { i18n } from "../translate/i18n";
 import { WhatsAppsContext } from "../context/WhatsApp/WhatsAppsContext";
@@ -78,15 +80,6 @@ const MainListItems = (props) => {
         icon={<DashboardOutlinedIcon />}
       />
       <ListItemLink
-        to="/connections"
-        primary={i18n.t("mainDrawer.listItems.connections")}
-        icon={
-          <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
-            <SyncAltIcon />
-          </Badge>
-        }
-      />
-      <ListItemLink
         to="/tickets"
         primary={i18n.t("mainDrawer.listItems.tickets")}
         icon={<WhatsAppIcon />}
@@ -102,6 +95,20 @@ const MainListItems = (props) => {
         primary={i18n.t("mainDrawer.listItems.quickAnswers")}
         icon={<QuestionAnswerOutlinedIcon />}
       />
+            <Divider />
+            <ListSubheader inset>
+              Kasir VIP 
+            </ListSubheader>
+      <ListItemLink
+        to="/kasirvip"
+        primary="Produksi"
+        icon={<StoreMallDirectoryIcon />}
+      />
+      <ListItemLink
+        to="/Penjualan"
+        primary="Penjualan"
+        icon={<LocalGroceryStoreIcon />}
+      />
       <Can
         role={user.profile}
         perform="drawer-admin-items:view"
@@ -112,14 +119,23 @@ const MainListItems = (props) => {
               {i18n.t("mainDrawer.listItems.administration")}
             </ListSubheader>
             <ListItemLink
+              to="/queues"
+              primary={i18n.t("mainDrawer.listItems.queues")}
+              icon={<AccountTreeOutlinedIcon />}
+            />
+            <ListItemLink
               to="/users"
               primary={i18n.t("mainDrawer.listItems.users")}
               icon={<PeopleAltOutlinedIcon />}
             />
             <ListItemLink
-              to="/queues"
-              primary={i18n.t("mainDrawer.listItems.queues")}
-              icon={<AccountTreeOutlinedIcon />}
+              to="/connections"
+              primary={i18n.t("mainDrawer.listItems.connections")}
+              icon={
+                <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
+                  <SyncAltIcon />
+                </Badge>
+              }
             />
             <ListItemLink
               to="/settings"

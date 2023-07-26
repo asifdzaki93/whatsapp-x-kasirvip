@@ -73,6 +73,19 @@ const Settings = () => {
 		};
 	}, []);
 
+	const handleChangeOtherApiToken = async e => {
+		const selectedValue = e.target.value;
+
+		try {
+			await api.put(`/settings/otherApiToken`, {
+				value: selectedValue,
+			});
+			toast.success(i18n.t("settings.success"));
+		} catch (err) {
+			toastError(err);
+		}
+	};
+
 	const handleChangeSetting = async e => {
 		const selectedValue = e.target.value;
 		const settingKey = e.target.name;
@@ -132,9 +145,28 @@ const Settings = () => {
 						margin="dense"
 						variant="outlined"
 						fullWidth
+						// dibawah ini ada userApiToken
 						value={settings && settings.length > 0 && getSettingValue("userApiToken")}
+						// Saya akan mengambilnya sebagai key di productDialog yang saya buat kemarin
+						//sebenarnya itu saja yang saya butuhkan, adakah cara termudah untuk melakukannya
 					/>
 				</Paper>
+
+				<Paper className={classes.paper}>
+					<TextField
+						id="other-api-token-setting"
+						label="Token Kasir.VIP"
+						margin="dense"
+						variant="outlined"
+						fullWidth
+						value={settings && settings.length > 0 && getSettingValue("otherApiToken")}
+						onChange={handleChangeOtherApiToken}
+					/>
+				</Paper>
+
+
+
+
 
 			</Container>
 		</div>
