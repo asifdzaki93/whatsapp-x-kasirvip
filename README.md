@@ -46,6 +46,113 @@ Jika kontak mengirim pesan baru dalam kurun waktu kurang dari 2 jam, dan tidak a
 
 https://github.com/asifdzaki93/whaticket-installer
 
+
+Tentu! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi Whaticket pada server lokal Windows dengan XAMPP:
+
+## Instalasi untuk Server Lokal di Windows dengan XAMPP
+
+**Persyaratan:**
+
+1. Instal Node.js: [Tautan Download](https://nodejs.org/en/download/)
+2. Instal XAMPP: [Tautan Download](https://www.apachefriends.org/download.html)
+
+**Langkah-langkah:**
+
+1. Buka XAMPP, aktifkan layanan Apache dan MySQL, dan buat database MySQL kosong (catat nama database yang dibuat).
+
+2. Buka CMD.
+
+3. Buat direktori dengan CMD:
+
+```bash
+cd C:\xampp\htdocs\
+git clone https://github.com/canove/whaticket.git
+```
+
+4. Masuk ke folder backend dengan CMD dan salin ".env.example" dan ganti namanya menjadi ".env":
+
+```bash
+cd C:\xampp\htdocs\whaticket\backend\
+copy .env.example .env
+```
+
+5. Buka file .env yang disalin di folder backend menggunakan text editor (misalnya Notepad++), dan edit seperti berikut:
+
+```bash
+NODE_ENV=
+BACKEND_URL=http://192.168.1.19      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+FRONTEND_URL=http://192.168.1.19:3000      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+PROXY_PORT=8080
+PORT=8080
+
+DB_DIALECT=
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=
+DB_NAME=whatsappnew      # (Ganti dengan nama database yang dibuat di PHPMyAdmin pada PC server Anda)
+
+JWT_SECRET=3123123213123
+JWT_REFRESH_SECRET=75756756756
+
+IO_REDIS_SERVER=
+IO_REDIS_PORT=
+```
+
+6. Kembali ke CMD di folder backend, dan ketik perintah-perintah berikut satu per satu:
+
+```bash
+npm install
+npm run build
+npx sequelize db:migrate
+npx sequelize db:seed:all
+npm start
+```
+
+7. Setup backend selesai. Sekarang, buka CMD baru di folder frontend:
+
+```bash
+cd C:\xampp\htdocs\whaticket\frontend\
+copy .env.example .env
+```
+
+8. Buka file .env yang disalin di folder frontend menggunakan text editor (misalnya Notepad++), dan edit seperti berikut:
+
+```bash
+REACT_APP_BACKEND_URL=http://192.168.1.19:8080/      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+```
+
+9. Kembali ke CMD di folder frontend, dan ketik perintah-perintah berikut satu per satu:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+10. Setup frontend selesai. Sekarang, buka browser dan masuk ke URL frontend: http://192.168.1.19:3000      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+
+**Memulai Server di Masa Mendatang:**
+
+1. Buka dan aktifkan layanan XAMPP.
+
+2. Buka CMD dan ketik:
+
+```bash
+cd C:\xampp\htdocs\whaticket\backend\
+npm start
+```
+
+3. Buka CMD baru dan ketik:
+
+```bash
+cd C:\xampp\htdocs\whaticket\frontend\
+npm start
+```
+
+Terima kasih kepada Canove atas pembuatan Whaticket!
+
+
+
 ## Instalasi dan Penggunaan (Linux Ubuntu - Pengembangan)
 
 Buat Database MySQL menggunakan docker:
