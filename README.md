@@ -26,7 +26,7 @@ Jika kontak mengirim pesan baru dalam kurun waktu kurang dari 2 jam, dan tidak a
 
 ## Tangkapan Layar
 
-![](https://github.com/canove/whaticket/raw/master/images/whaticket-queues.gif)
+![](https://github.com/asifdzaki93/whatsapp-x-kasirvip/raw/master/images/whaticket-queues.gif)
 <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/chat2.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/chat3.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/multiple-whatsapps2.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/contacts1.png" width="350">
 
 ## Fitur
@@ -62,7 +62,7 @@ Tentu bisa! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi What
 
 ```bash
 cd C:\xampp\htdocs\
-git clone https://github.com/canove/whaticket.git
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip.git
 ```
 
 4. Masuk ke folder backend dengan CMD dan salin ".env.example" dan ganti namanya menjadi ".env":
@@ -177,7 +177,7 @@ sudo apt-get install -y libxshmfence-dev libgbm-dev wget unzip fontconfig locale
 Salin repositori ini:
 
 ```bash
-git clone https://github.com/canove/whaticket/ whaticket
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip/ whaticket
 ```
 
 Masuk ke folder backend dan buat file .env:
@@ -308,7 +308,7 @@ Salin repositori ini:
 
 ```bash
 cd ~
-git clone https://github.com/canove/whaticket whaticket
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip whaticket
 ```
 
 Buat file .env untuk backend dan isi dengan detailnya:
