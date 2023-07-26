@@ -21,7 +21,7 @@ Frontend adalah aplikasi _chat_ berfitur lengkap multi-pengguna yang menggunakan
 
 ## Bagaimana cara kerjanya?
 
-Setiap kali ada pesan baru yang diterima di WhatsApp yang terkait, tiket baru akan dibuat. Kemudian, tiket ini dapat dijangkau dalam _antrian_ di halaman _Tickets_, di mana Anda dapat menugaskan tiket ke diri Anda sendiri dengan _menerima_nya, merespons pesan tiket, dan akhirnya _menyelesaikan_nya.
+Setiap kali ada pesan baru yang diterima di WhatsApp yang terkait, tiket baru akan dibuat. Kemudian, tiket ini dapat dijangkau dalam _antrian_ di halaman _Tickets_, di mana Anda dapat menugaskan tiket ke diri Anda sendiri dengan _menerima_ nya, merespons pesan tiket, dan akhirnya _menyelesaikan_ nya.
 
 Pesan-pesan berikutnya dari kontak yang sama akan terkait dengan tiket **terbuka/berjalan** pertama yang ditemukan.
 
