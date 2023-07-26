@@ -47,9 +47,8 @@ Jika kontak mengirim pesan baru dalam kurun waktu kurang dari 2 jam, dan tidak a
 https://github.com/asifdzaki93/whaticket-installer
 
 
-Tentu! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi Whaticket pada server lokal Windows dengan XAMPP:
-
 ## Instalasi untuk Server Lokal di Windows dengan XAMPP
+Tentu bisa! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi Whaticket pada server lokal Windows dengan XAMPP:
 
 **Persyaratan:**
 
