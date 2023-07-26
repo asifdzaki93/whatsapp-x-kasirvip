@@ -1,4 +1,4 @@
-## Alat Interaktif CLI untuk Menginstal dan Memperbarui Whaticket
+## Alat Interaktif CLI untuk Menginstal dan Memperbarui Whaticket X KasirVIP
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?business=VWW3BHW4AWHUY&item_name=Desenvolvimento+de+Software&currency_code=BRL)
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B21084%2Fgithub.com%2Fcanove%2Fwhaticket.svg?type=shield)](https://app.fossa.com/projects/custom%2B21084%2Fgithub.com%2Fcanove%2Fwhaticket?ref=badge_shield)
@@ -7,7 +7,7 @@
 [![Discord Chat](https://img.shields.io/discord/784109818247774249.svg?logo=discord)](https://discord.gg/Dp2tTZRYHg)
 [![Forum](https://img.shields.io/badge/forum-online-blue.svg?logo=discourse)](https://whaticket.online/)
 
-# WhaTicket
+# Whaticket X KasirVIP
 
 **CATATAN**: Versi baru dari whatsapp-web.js memerlukan Node 14. Tingkatkan instalasi Anda untuk terus menggunakannya.
 
@@ -40,6 +40,11 @@ Jika kontak mengirim pesan baru dalam kurun waktu kurang dari 2 jam, dan tidak a
 - Mengirim dan menerima pesan ✅
 - Mengirim media (gambar/audio/dokumen) ✅
 - Menerima media (gambar/audio/video/dokumen) ✅
+
+
+## Instalasi dan Penggunaan (Linux Ubuntu - Menggunakan installer yang saya sediakan)
+
+https://github.com/asifdzaki93/whaticket-installer
 
 ## Instalasi dan Penggunaan (Linux Ubuntu - Pengembangan)
 
