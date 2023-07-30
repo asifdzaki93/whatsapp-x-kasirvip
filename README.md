@@ -1,90 +1,203 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?business=VWW3BHW4AWHUY&item_name=Desenvolvimento+de+Software&currency_code=BRL)
+
+## Alat Interaktif CLI untuk Menginstal dan Memperbarui Whaticket X KasirVIP
+
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B21084%2Fgithub.com%2Fcanove%2Fwhaticket.svg?type=shield)](https://app.fossa.com/projects/custom%2B21084%2Fgithub.com%2Fcanove%2Fwhaticket?ref=badge_shield)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=canove_whaticket&metric=alert_status)](https://sonarcloud.io/dashboard?id=canove_whaticket)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=canove_whaticket&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=canove_whaticket)
-[![Discord Chat](https://img.shields.io/discord/784109818247774249.svg?logo=discord)](https://discord.gg/Dp2tTZRYHg)
-[![Forum](https://img.shields.io/badge/forum-online-blue.svg?logo=discourse)](https://whaticket.online/)
 
-# WhaTicket
+# Whaticket X KasirVIP
 
-**NOTE**: The new version of whatsapp-web.js required Node 14. Upgrade your installations to keep using it.
+**CATATAN**: Versi baru dari whatsapp-web.js memerlukan Node 14. Tingkatkan instalasi Anda untuk terus menggunakannya.
 
-A _very simple_ Ticket System based on WhatsApp messages.
+Sebuah Sistem Tiket yang _sangat sederhana_ berbasis pesan WhatsApp.
 
-Backend uses [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js) to receive and send WhatsApp messages, create tickets from them and store all in a MySQL database.
+Backend menggunakan [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js) untuk menerima dan mengirim pesan WhatsApp, membuat tiket dari pesan tersebut, dan menyimpan semuanya dalam database MySQL.
 
-Frontend is a full-featured multi-user _chat app_ bootstrapped with react-create-app and Material UI, that comunicates with backend using REST API and Websockets. It allows you to interact with contacts, tickets, send and receive WhatsApp messages.
+Frontend adalah aplikasi _chat_ berfitur lengkap multi-pengguna yang menggunakan react-create-app dan Material UI, berkomunikasi dengan backend menggunakan REST API dan Websockets. Ini memungkinkan Anda berinteraksi dengan kontak, tiket, mengirim dan menerima pesan WhatsApp.
 
-**NOTE**: I can't guarantee you will not be blocked by using this method, although it has worked for me. WhatsApp does not allow bots or unofficial clients on their platform, so this shouldn't be considered totally safe.
+**CATATAN**: Saya tidak dapat menjamin bahwa Anda tidak akan diblokir dengan menggunakan metode ini, meskipun ini telah berhasil untuk saya. WhatsApp tidak mengizinkan bot atau klien tidak resmi pada platform mereka, jadi ini tidak boleh dianggap sepenuhnya aman.
 
-## How it works?
+## Bagaimana cara kerjanya?
 
-On every new message received in an associated WhatsApp, a new Ticket is created. Then, this ticket can be reached in a _queue_ on _Tickets_ page, where you can assign ticket to your yourself by _aceppting_ it, respond ticket message and eventually _resolve_ it.
+Setiap kali ada pesan baru yang diterima di WhatsApp yang terkait, tiket baru akan dibuat. Kemudian, tiket ini dapat dijangkau dalam _antrian_ di halaman _Tickets_, di mana Anda dapat menugaskan tiket ke diri Anda sendiri dengan _menerima_ nya, merespons pesan tiket, dan akhirnya _menyelesaikan_ nya.
 
-Subsequent messages from same contact will be related to first **open/pending** ticket found.
+Pesan-pesan berikutnya dari kontak yang sama akan terkait dengan tiket **terbuka/berjalan** pertama yang ditemukan.
 
-If a contact sent a new message in less than 2 hours interval, and there is no ticket from this contact with **pending/open** status, the newest **closed** ticket will be reopen, instead of creating a new one.
+Jika kontak mengirim pesan baru dalam kurun waktu kurang dari 2 jam, dan tidak ada tiket dari kontak ini dengan status **tertunda/terbuka**, tiket **tertutup** terbaru akan dibuka kembali, bukan menciptakan yang baru.
 
-## Screenshots
+## Tangkapan Layar
 
-![](https://github.com/canove/whaticket/raw/master/images/whaticket-queues.gif)
+![](https://github.com/asifdzaki93/whatsapp-x-kasirvip/raw/master/images/whaticket-queues.gif)
 <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/chat2.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/chat3.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/multiple-whatsapps2.png" width="350"> <img src="https://raw.githubusercontent.com/canove/whaticket/master/images/contacts1.png" width="350">
 
-## Features
+## Fitur
 
-- Have multiple users chating in same WhatsApp Number ✅
-- Connect to multiple WhatsApp accounts and receive all messages in one place ✅ 🆕
-- Create and chat with new contacts without touching cellphone ✅
-- Send and receive message ✅
-- Send media (images/audio/documents) ✅
-- Receive media (images/audio/video/documents) ✅
+- Dapat digunakan oleh beberapa pengguna untuk mengobrol dengan Nomor WhatsApp yang sama ✅
+- Terhubung ke beberapa akun WhatsApp dan menerima semua pesan di satu tempat ✅ 🆕
+- Membuat dan mengobrol dengan kontak baru tanpa menyentuh ponsel ✅
+- Mengirim dan menerima pesan ✅
+- Mengirim media (gambar/audio/dokumen) ✅
+- Menerima media (gambar/audio/video/dokumen) ✅
 
-## Installation and Usage (Linux Ubuntu - Development)
 
-Create Mysql Database using docker:
-_Note_: change MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USER and MYSQL_ROOT_PASSWORD.
+## Instalasi dan Penggunaan (Linux Ubuntu - Menggunakan installer yang saya sediakan)
+
+https://github.com/asifdzaki93/whaticket-installer
+
+
+## Instalasi untuk Server Lokal di Windows dengan XAMPP
+Tentu bisa! Berikut ini adalah panduan instalasi untuk menjalankan aplikasi Whaticket pada server lokal Windows dengan XAMPP:
+
+**Persyaratan:**
+
+1. Instal Node.js: [Tautan Download](https://nodejs.org/en/download/) pilih versi 14
+2. Instal XAMPP: [Tautan Download](https://www.apachefriends.org/download.html)
+
+**Langkah-langkah:**
+
+1. Buka XAMPP, aktifkan layanan Apache dan MySQL, dan buat database MySQL kosong (catat nama database yang dibuat).
+
+2. Buka CMD.
+
+3. Buat direktori dengan CMD:
+
+```bash
+cd C:\xampp\htdocs\
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip.git
+```
+
+4. Masuk ke folder backend dengan CMD dan salin ".env.example" dan ganti namanya menjadi ".env":
+
+```bash
+cd C:\xampp\htdocs\whaticket\backend\
+copy .env.example .env
+```
+
+5. Buka file .env yang disalin di folder backend menggunakan text editor (misalnya Notepad++), dan edit seperti berikut:
+
+```bash
+NODE_ENV=
+BACKEND_URL=http://192.168.1.19      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+FRONTEND_URL=http://192.168.1.19:3000      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+PROXY_PORT=8080
+PORT=8080
+
+DB_DIALECT=
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=
+DB_NAME=whatsappnew      # (Ganti dengan nama database yang dibuat di PHPMyAdmin pada PC server Anda)
+
+JWT_SECRET=3123123213123
+JWT_REFRESH_SECRET=75756756756
+
+IO_REDIS_SERVER=
+IO_REDIS_PORT=
+```
+
+6. Kembali ke CMD di folder backend, dan ketik perintah-perintah berikut satu per satu:
+
+```bash
+npm install
+npm run build
+npx sequelize db:migrate
+npx sequelize db:seed:all
+npm start
+```
+
+7. Setup backend selesai. Sekarang, buka CMD baru di folder frontend:
+
+```bash
+cd C:\xampp\htdocs\whaticket\frontend\
+copy .env.example .env
+```
+
+8. Buka file .env yang disalin di folder frontend menggunakan text editor (misalnya Notepad++), dan edit seperti berikut:
+
+```bash
+REACT_APP_BACKEND_URL=http://192.168.1.19:8080/      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+```
+
+9. Kembali ke CMD di folder frontend, dan ketik perintah-perintah berikut satu per satu:
+
+```bash
+npm install
+npm run build
+npm start
+```
+
+10. Setup frontend selesai. Sekarang, buka browser dan masuk ke URL frontend: http://192.168.1.19:3000      # (Ganti dengan IP yang ditetapkan untuk PC server Anda)
+
+**Memulai Server di Masa Mendatang:**
+
+1. Buka dan aktifkan layanan XAMPP.
+
+2. Buka CMD dan ketik:
+
+```bash
+cd C:\xampp\htdocs\whaticket\backend\
+npm start
+```
+
+3. Buka CMD baru dan ketik:
+
+```bash
+cd C:\xampp\htdocs\whaticket\frontend\
+npm start
+```
+
+Terima kasih kepada Canove atas pembuatan Whaticket!
+
+
+
+## Instalasi dan Penggunaan (Linux Ubuntu - Pengembangan)
+
+Buat Database MySQL menggunakan docker:
+_Catatan_: ganti MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USER, dan
+
+ MYSQL_ROOT_PASSWORD sesuai kebutuhan.
 
 ```bash
 docker run --name whaticketdb -e MYSQL_ROOT_PASSWORD=strongpassword -e MYSQL_DATABASE=whaticket -e MYSQL_USER=whaticket -e MYSQL_PASSWORD=whaticket --restart always -p 3306:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
 
-# Or run using `docker-compose` as below
-# Before copy .env.example to .env first and set the variables in the file.
+# Atau jalankan menggunakan `docker-compose` seperti berikut
+# Sebelumnya, salin .env.example ke .env terlebih dahulu dan atur variabel-variabel di dalam file tersebut.
 docker-compose up -d mysql
 
-# To administer this mysql database easily using phpmyadmin. 
-# It will run by default on port 9000, but can be changed in .env using `PMA_PORT`
+# Untuk mengelola database MySQL dengan mudah menggunakan phpMyAdmin.
+# Ini akan berjalan pada port 9000 secara default, tetapi dapat diubah dalam file .env menggunakan `PMA_PORT`.
 docker-compose -f docker-compose.phpmyadmin.yaml up -d
 ```
 
-Install puppeteer dependencies:
+Instal dependensi untuk puppeteer:
 
 ```bash
 sudo apt-get install -y libxshmfence-dev libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 ```
 
-Clone this repo
+Salin repositori ini:
 
 ```bash
-git clone https://github.com/canove/whaticket/ whaticket
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip/ whaticket
 ```
 
-Go to backend folder and create .env file:
+Masuk ke folder backend dan buat file .env:
 
 ```bash
 cp .env.example .env
 nano .env
 ```
 
-Fill `.env` file with environment variables:
+Isi file `.env` dengan variabel lingkungan:
 
 ```bash
-NODE_ENV=DEVELOPMENT      #it helps on debugging
+NODE_ENV=DEVELOPMENT      # membantu dalam proses debug
 BACKEND_URL=http://localhost
 FRONTEND_URL=https://localhost:3000
 PROXY_PORT=8080
 PORT=8080
 
-DB_HOST=                  #DB host IP, usually localhost
+DB_HOST=                  #IP host database MySQL, biasanya localhost
 DB_DIALECT=
 DB_USER=
 DB_PASS=
@@ -94,7 +207,7 @@ JWT_SECRET=3123123213123
 JWT_REFRESH_SECRET=75756756756
 ```
 
-Install backend dependencies, build app, run migrations and seeds:
+Instal dependensi backend, bangun aplikasi, jalankan migrasi dan seed:
 
 ```bash
 npm install
@@ -103,57 +216,57 @@ npx sequelize db:migrate
 npx sequelize db:seed:all
 ```
 
-Start backend:
+Jalankan backend:
 
 ```bash
 npm start
 ```
 
-Open a second terminal, go to frontend folder and create .env file:
+Buka terminal kedua, masuk ke folder frontend, dan buat file .env:
 
 ```bash
 nano .env
-REACT_APP_BACKEND_URL = http://localhost:8080/ # Your previous configured backend app URL.
+REACT_APP_BACKEND_URL = http://localhost:8080/ # Ganti dengan URL backend yang telah dikonfigurasi sebelumnya.
 ```
 
-Start frontend app:
+Jalankan aplikasi frontend:
 
 ```bash
 npm start
 ```
 
-- Go to http://your_server_ip:3000/signup
-- Create an user and login with it.
-- On the sidebard, go to _Connections_ page and create your first WhatsApp connection.
-- Wait for QR CODE button to appear, click it and read qr code.
-- Done. Every message received by your synced WhatsApp number will appear in Tickets List.
+- Buka http://your_server_ip:3000/signup
+- Buat pengguna dan masuk dengan akun tersebut.
+- Di bagian samping, buka halaman _Connections_ dan buat koneksi WhatsApp pertama Anda.
+- Tunggu tombol QR CODE muncul, klik tombol tersebut dan baca kode QR.
+- Selesai. Setiap pesan yang diterima oleh nomor WhatsApp yang disinkronkan Anda akan muncul dalam Daftar Tiket.
 
-## Basic production deployment
+## Instalasi Produksi Dasar
 
-### Using Ubuntu 20.04 VPS
+### Menggunakan VPS Ubuntu 20.04
 
-All instructions below assumes you are NOT running as root, since it will give an error in puppeteer. So let's start creating a new user and granting sudo privileges to it:
+Semua instruksi di bawah ini mengasumsikan Anda TIDAK menjalankan sebagai root, karena akan menyebabkan kesalahan di puppeteer. Jadi mari buat pengguna baru dan memberikan izin sudo padanya:
 
 ```bash
 adduser deploy
 usermod -aG sudo deploy
 ```
 
-Now we can login with this new user:
+Sekarang kita dapat masuk dengan pengguna baru ini:
 
 ```bash
 su deploy
 ```
 
-You'll need two subdomains forwarding to yours VPS ip to follow these instructions. We'll use `myapp.mydomain.com` to frontend and `api.mydomain.com` to backend in the following example.
+Anda akan memerlukan dua subdomain yang mengarah ke alamat IP VPS Anda untuk mengikuti instruksi ini. Kami akan menggunakan `myapp.mydomain.com` untuk frontend dan `api.mydomain.com` untuk backend dalam contoh berikut.
 
-Update all system packages:
+Perbarui semua paket sistem:
 
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 
-Install node, and confirm node command is available:
+Instal node, dan pastikan perintah node tersedia:
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
@@ -162,7 +275,7 @@ node -v
 npm -v
 ```
 
-Install docker and add you user to docker group:
+Instal docker dan tambahkan pengguna Anda ke grup docker:
 
 ```bash
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -175,29 +288,31 @@ sudo usermod -aG docker ${USER}
 su - ${USER}
 ```
 
-Create Mysql Database using docker:
-_Note_: change MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USER and MYSQL_ROOT_PASSWORD.
+Buat Database MySQL menggunakan docker:
+_Catatan_: ganti MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USER, dan MYSQL_ROOT_PASSWORD sesuai kebutuhan.
 
 ```bash
 docker run --name whaticketdb -e MYSQL_ROOT_PASSWORD=strongpassword -e MYSQL_DATABASE=whaticket -e MYSQL_USER=whaticket -e MYSQL_PASSWORD=whaticket --restart always -p 3306:3306 -d mariadb:latest --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
 
-# Or run using `docker-compose` as below
-# Before copy .env.example to .env first and set the variables in the file.
+# Atau jalankan menggunakan `docker-compose` seperti berikut
+# Sebelumnya, salin .env.example ke .env terlebih dahulu dan atur variabel-variabel di dalam file tersebut.
 docker-compose up -d mysql
 
-# To administer this mysql database easily using phpmyadmin. 
-# It will run by default on port 9000, but can be changed in .env using `PMA_PORT`
+# Untuk mengelola database MySQL dengan mudah menggunakan phpMyAdmin. 
+# Ini akan berjalan pada port 9000 secara default, tet
+
+api dapat diubah dalam file .env menggunakan `PMA_PORT`
 docker-compose -f docker-compose.phpmyadmin.yaml up -d
 ```
 
-Clone this repository:
+Salin repositori ini:
 
 ```bash
 cd ~
-git clone https://github.com/canove/whaticket whaticket
+git clone https://github.com/asifdzaki93/whatsapp-x-kasirvip whaticket
 ```
 
-Create backend .env file and fill with details:
+Buat file .env untuk backend dan isi dengan detailnya:
 
 ```bash
 cp whaticket/backend/.env.example whaticket/backend/.env
@@ -206,9 +321,9 @@ nano whaticket/backend/.env
 
 ```bash
 NODE_ENV=
-BACKEND_URL=https://api.mydomain.com      #USE HTTPS HERE, WE WILL ADD SSL LATTER
-FRONTEND_URL=https://myapp.mydomain.com   #USE HTTPS HERE, WE WILL ADD SSL LATTER, CORS RELATED!
-PROXY_PORT=443                            #USE NGINX REVERSE PROXY PORT HERE, WE WILL CONFIGURE IT LATTER
+BACKEND_URL=https://api.mydomain.com      # GUNAKAN HTTPS DI SINI, KAMI AKAN MENAMBAHKAN SSL SELANJUTNYA
+FRONTEND_URL=https://myapp.mydomain.com   # GUNAKAN HTTPS DI SINI, KAMI AKAN MENAMBAHKAN SSL SELANJUTNYA, TERKAIT CORS!
+PROXY_PORT=443                            # GUNAKAN PORT NGINX REVERSE PROXY DI SINI, KAMI AKAN MENGATURNYA SELANJUTNYA
 PORT=8080
 
 DB_HOST=localhost
@@ -221,70 +336,31 @@ JWT_SECRET=3123123213123
 JWT_REFRESH_SECRET=75756756756
 ```
 
-Install puppeteer dependencies:
+Instal dependensi puppeteer:
 
 ```bash
 sudo apt-get install -y libxshmfence-dev libgbm-dev wget unzip fontconfig locales gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 ```
 
-Install backend dependencies, build app, run migrations and seeds:
+Instal dependensi backend, bangun aplikasi, jalankan migrasi, dan seed:
 
 ```bash
 cd whaticket/backend
 npm install
 npm run build
 npx sequelize db:migrate
-npx sequelize db:seed:all
+npx sequelize db:seed
 ```
 
-Start it with `npm start`, you should see: `Server started on port...` on console. Hit `CTRL + C` to exit.
-
-Install pm2 **with sudo**, and start backend with it:
+Jalankan backend dengan pm2, dan simpan daftar proses pm2 untuk dijalankan otomatis setelah reboot:
 
 ```bash
 sudo npm install -g pm2
 pm2 start dist/server.js --name whaticket-backend
-```
-
-Make pm2 auto start after reboot:
-
-```bash
-pm2 startup ubuntu -u `YOUR_USERNAME`
-```
-
-Copy the last line outputed from previus command and run it, its something like:
-
-```bash
-sudo env PATH=\$PATH:/usr/bin pm2 startup ubuntu -u YOUR_USERNAME --hp /home/YOUR_USERNAM
-```
-
-Go to frontend folder and install dependencies:
-
-```bash
-cd ../frontend
-npm install
-```
-
-Create frontend .env file and fill it ONLY with your backend address, it should look like this:
-
-```bash
-REACT_APP_BACKEND_URL = https://api.mydomain.com/
-```
-
-Build frontend app:
-
-```bash
-npm run build
-```
-
-Start frontend with pm2, and save pm2 process list to start automatically after reboot:
-
-```bash
-pm2 start server.js --name whaticket-frontend
 pm2 save
 ```
 
-To check if it's running, run `pm2 list`, it should look like:
+Untuk memeriksa apakah pm2 berjalan, jalankan `pm2 list`, hasilnya seharusnya seperti ini:
 
 ```bash
 deploy@ubuntu-whats:~$ pm2 list
@@ -297,25 +373,25 @@ deploy@ubuntu-whats:~$ pm2 list
 
 ```
 
-Install nginx:
+Instal nginx:
 
 ```bash
 sudo apt install nginx
 ```
 
-Remove nginx default site:
+Hapus situs default nginx:
 
 ```bash
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-Create a new nginx site to frontend app:
+Buat situs nginx baru untuk aplikasi frontend:
 
 ```bash
 sudo nano /etc/nginx/sites-available/whaticket-frontend
 ```
 
-Edit and fill it with this information, changing `server_name` to yours equivalent to `myapp.mydomain.com`:
+Edit dan isi dengan informasi berikut, mengganti `server_name` sesuai dengan yang sesuai dengan `myapp.mydomain.com` Anda:
 
 ```bash
 server {
@@ -335,7 +411,7 @@ server {
 }
 ```
 
-Create another one to backend api, changing `server_name` to yours equivalent to `api.mydomain.com`, and `proxy_pass` to your localhost backend node server URL:
+Buat yang lain untuk backend api, mengganti `server_name` sesuai dengan yang sesuai dengan `api.mydomain.com`, dan `proxy_pass` sesuai dengan URL server node backend localhost Anda:
 
 ```bash
 sudo cp /etc/nginx/sites-available/whaticket-frontend /etc/nginx/sites-available/whaticket-backend
@@ -352,181 +428,82 @@ server {
 }
 ```
 
-Create a symbolic links to enable nginx sites:
+Buat tautan simbolik untuk mengaktifkan situs nginx:
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/whaticket-frontend /etc/nginx/sites-enabled
 sudo ln -s /etc/nginx/sites-available/whaticket-backend /etc/nginx/sites-enabled
 ```
 
-By default, nginx limit body size to 1MB, which isn't enough for some media uploads. Lets change it to 20MB, adding a new line to config file:
+Secara default, nginx membatasi ukuran body ke 1MB, yang tidak cukup untuk beberapa unggahan media. Mari ubah menjadi 20MB dengan menambahkan baris baru ke file konfigurasi:
 
 ```bash
 sudo nano /etc/nginx/nginx.conf
 ...
 http {
     ...
-    client_max_body_size 20M; # HANDLE BIGGER UPLOADS
+    client_max_body_size 20M; # ATASI UNGGAHAN LEBIH BESAR
 }
 ```
 
-Test nginx configuration and restart server:
+Uji konfigurasi nginx dan mulai ulang server:
 
 ```bash
 sudo nginx -t
 sudo service nginx restart
 ```
 
-Now, enable SSL (https) on your sites to use all app features like notifications and sending audio messages. An easy way to this is using Certbot:
+Sekarang, aktifkan SSL (https) pada situs Anda untuk menggunakan semua fitur aplikasi seperti notifikasi dan pengiriman pesan
 
-Install certbot:
+ media.
 
-```bash
-sudo snap install --classic certbot
-sudo apt update
-```
-
-Enable SSL on nginx (Fill / Accept all information required):
+Aktifkan modul SSL:
 
 ```bash
-sudo certbot --nginx
+sudo a2enmod ssl
 ```
 
-### Using docker and docker-compose
-
-To run WhaTicket using docker you must perform the following steps:
+Buat direktori untuk menyimpan sertifikat SSL:
 
 ```bash
-cp .env.example .env
+sudo mkdir /etc/nginx/ssl
 ```
 
-Now it will be necessary to configure the .env using its information, the variables are the same as those mentioned in the deployment using ubuntu, with the exception of mysql settings that were not in the .env. 
+Buat sertifikat SSL (Anda dapat menggunakan sertifikat yang ada atau gunakan Let's Encrypt untuk mendapatkan sertifikat gratis):
 
 ```bash
-# MYSQL
-MYSQL_ENGINE=                           # default: mariadb
-MYSQL_VERSION=                          # default: 10.6
-MYSQL_ROOT_PASSWORD=strongpassword      # change it please
-MYSQL_DATABASE=whaticket
-MYSQL_PORT=3306                         # default: 3306; Use this port to expose mysql server
-TZ=America/Fortaleza                    # default: America/Fortaleza; Timezone for mysql
-
-# BACKEND
-BACKEND_PORT=                           # default: 8080; but access by host not use this port
-BACKEND_SERVER_NAME=api.mydomain.com
-BACKEND_URL=https://api.mydomain.com
-PROXY_PORT=443
-JWT_SECRET=3123123213123                # change it please
-JWT_REFRESH_SECRET=75756756756          # change it please
-
-# FRONTEND
-FRONTEND_PORT=80                        # default: 3000; Use port 80 to expose in production
-FRONTEND_SSL_PORT=443                   # default: 3001; Use port 443 to expose in production
-FRONTEND_SERVER_NAME=myapp.mydomain.com
-FRONTEND_URL=https://myapp.mydomain.com
-
-# BROWSERLESS
-MAX_CONCURRENT_SESSIONS=                # default: 1; Use only if using browserless
+sudo nano /etc/nginx/sites-available/whaticket-frontend
 ```
 
-After defining the variables, run the following command:
+Tambahkan konfigurasi SSL ke situs frontend Anda seperti berikut:
 
 ```bash
-docker-compose up -d --build
+server {
+    server_name myapp.mydomain.com;
+
+    ssl on;
+    ssl_certificate /etc/nginx/ssl/fullchain.pem;  # Path to your SSL certificate
+    ssl_certificate_key /etc/nginx/ssl/privkey.pem;  # Path to your SSL private key
+
+    location / {
+        ...
+    }
+}
 ```
 
-On the `first` run it will be necessary to seed the database tables using the following command:
+Aktifkan situs SSL dan restart Nginx:
 
 ```bash
-docker-compose exec backend npx sequelize db:seed:all
+sudo ln -s /etc/nginx/sites-available/whaticket-frontend /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/whaticket-backend /etc/nginx/sites-enabled
+sudo nginx -t
+sudo service nginx restart
 ```
 
-#### SSL Certificate
+Setelah beberapa saat, aplikasi harus berjalan dengan baik, dan Anda dapat mengaksesnya melalui https://myapp.mydomain.com untuk frontend dan https://api.mydomain.com untuk backend.
 
-To deploy the ssl certificate, add it to the `ssl/certs` folder. Inside it there should be a `backend` and a `frontend` folder, and each of them should contain the files `fullchain.pem` and `privkey.pem`, as in the structure below:
+Jika ada kesalahan atau masalah dalam proses instalasi atau di atas, Anda dapat merujuk ke log Nginx (`/var/log/nginx/error.log`) dan log aplikasi (`whaticket/backend/logs/combined.log`) untuk informasi lebih lanjut tentang apa yang salah.
 
-```bash
-.
-├── certs
-│   ├── backend
-│   │   ├── fullchain.pem
-│   │   └── privkey.pem
-│   └── frontend
-│       ├── fullchain.pem
-│       └── privkey.pem
-└── www
-```
+Sekarang, Anda harus dapat menggunakan aplikasi Whaticket melalui frontend yang Anda pasang dan menghubungkannya dengan nomor WhatsApp melalui backend yang dijalankan di server Anda.
 
-To generate the certificate files use `certbot` which can be installed using snap, I used the following command:
-
-Note: The frontend container that runs nginx is already prepared to receive the request made by certboot to validate the certificate.
-
-```bash
-# BACKEND
-certbot certonly --cert-name backend --webroot --webroot-path ./ssl/www/ -d api.mydomain.com
-
-# FRONTEND
-certbot certonly --cert-name frontend --webroot --webroot-path ./ssl/www/ -d myapp.mydomain.com
-```
-
-## Access Data
-
-User: admin@whaticket.com
-Password: admin
-
-## Upgrading
-
-WhaTicket is a working in progress and we are adding new features frequently. To update your old installation and get all the new features, you can use a bash script like this:
-
-**Note**: Always check the .env.example and adjust your .env file before upgrading, since some new variable may be added.
-
-```bash
-nano updateWhaticket
-```
-
-```bash
-#!/bin/bash
-echo "Updating Whaticket, please wait."
-
-cd ~
-cd whaticket
-git pull
-cd backend
-npm install
-rm -rf dist
-npm run build
-npx sequelize db:migrate
-npx sequelize db:seed
-cd ../frontend
-npm install
-rm -rf build
-npm run build
-pm2 restart all
-
-echo "Update finished. Enjoy!"
-```
-
-Make it executable and run it:
-
-```bash
-chmod +x updateWhaticket
-./updateWhaticket
-```
-
-## Contributing
-
-This project helps you and you want to help keep it going? Buy me a coffee:
-
-<a href="https://www.buymeacoffee.com/canove" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 61px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-Para doações em BRL, utilize o Paypal:
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate?business=VWW3BHW4AWHUY&item_name=Desenvolvimento+de+Software&currency_code=BRL)
-
-Any help and suggestions will be apreciated.
-
-## Disclaimer
-
-I just started leaning Javascript a few months ago and this is my first project. It may have security issues and many bugs. I recommend using it only on local network.
-
-This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. The official WhatsApp website can be found at https://whatsapp.com. "WhatsApp" as well as related names, marks, emblems and images are registered trademarks of their respective owners.
+Pastikan untuk mengamankan server Anda dengan pengaturan keamanan tambahan, seperti firewall dan langganan keamanan reguler. Juga, perhatikan bahwa WhatsApp tidak mendukung secara resmi penggunaan bot atau klien tidak resmi, sehingga penggunaan aplikasi ini mungkin melanggar ketentuan layanan WhatsApp. Gunakan dengan pertimbangan dan tanggung jawab.
