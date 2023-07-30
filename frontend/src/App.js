@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Routes from "./routes";
 import "react-toastify/dist/ReactToastify.css";
-
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { ptBR } from "@material-ui/core/locale";
+
+import { ThemeProvider as ThemeContextProvider } from './ThemeContext';
 
 const App = () => {
   const [locale, setLocale] = useState();
@@ -21,7 +22,19 @@ const App = () => {
         },
       },
       palette: {
-        primary: { main: "#2576d2" },
+        primary: { main: "#b71c1c" }, // Merah yang lebih gelap
+        secondary: { main: "#f9a825" }, // Kuning yang lebih gelap
+        error: { main: '#f44336' },
+        warning: { main: '#ff9800' },
+        info: { main: '#2196f3' },
+        success: { main: '#4caf50' },
+      },
+      typography: {
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+        fontSize: 14,
+        button: {
+          textTransform: 'none',
+        },
       },
     },
     locale
@@ -39,7 +52,10 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <ThemeContextProvider>
+
       <Routes />
+      </ThemeContextProvider>
     </ThemeProvider>
   );
 };

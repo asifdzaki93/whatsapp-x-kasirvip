@@ -17,6 +17,7 @@ import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
 import QuestionAnswerOutlinedIcon from "@material-ui/icons/QuestionAnswerOutlined";
 import StoreMallDirectoryIcon from '@material-ui/icons/StoreMallDirectory';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
+import { useTheme } from '@material-ui/core/styles';
 
 import { i18n } from "../translate/i18n";
 import { WhatsAppsContext } from "../context/WhatsApp/WhatsAppsContext";
@@ -50,6 +51,10 @@ const MainListItems = (props) => {
   const { user } = useContext(AuthContext);
   const [connectionWarning, setConnectionWarning] = useState(false);
 
+  const theme = useTheme();
+  const themeMode = theme.palette.type;
+  const iconColor = themeMode === 'light' ? 'primary' : 'secondary';
+
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (whatsApps.length > 0) {
@@ -77,37 +82,36 @@ const MainListItems = (props) => {
       <ListItemLink
         to="/"
         primary="Dashboard"
-        icon={<DashboardOutlinedIcon />}
+        icon={<DashboardOutlinedIcon  color={iconColor}/>}
       />
       <ListItemLink
         to="/tickets"
         primary={i18n.t("mainDrawer.listItems.tickets")}
-        icon={<WhatsAppIcon />}
+        icon={<WhatsAppIcon  color={iconColor}/>}
       />
-
       <ListItemLink
         to="/contacts"
         primary={i18n.t("mainDrawer.listItems.contacts")}
-        icon={<ContactPhoneOutlinedIcon />}
+        icon={<ContactPhoneOutlinedIcon  color={iconColor}/>}
       />
       <ListItemLink
         to="/quickAnswers"
         primary={i18n.t("mainDrawer.listItems.quickAnswers")}
-        icon={<QuestionAnswerOutlinedIcon />}
+        icon={<QuestionAnswerOutlinedIcon  color={iconColor}/>}
       />
-            <Divider />
-            <ListSubheader inset>
-              Kasir VIP 
-            </ListSubheader>
+      <Divider />
+      <ListSubheader inset>
+        Kasir VIP 
+      </ListSubheader>
       <ListItemLink
         to="/kasirvip"
-        primary="Produksi"
-        icon={<StoreMallDirectoryIcon />}
+        primary="Toko"
+        icon={<StoreMallDirectoryIcon  color={iconColor}/>}
       />
       <ListItemLink
         to="/Penjualan"
         primary="Penjualan"
-        icon={<LocalGroceryStoreIcon />}
+        icon={<LocalGroceryStoreIcon  color={iconColor}/>}
       />
       <Can
         role={user.profile}
@@ -121,26 +125,26 @@ const MainListItems = (props) => {
             <ListItemLink
               to="/queues"
               primary={i18n.t("mainDrawer.listItems.queues")}
-              icon={<AccountTreeOutlinedIcon />}
+              icon={<AccountTreeOutlinedIcon  color={iconColor}/>}
             />
             <ListItemLink
               to="/users"
               primary={i18n.t("mainDrawer.listItems.users")}
-              icon={<PeopleAltOutlinedIcon />}
+              icon={<PeopleAltOutlinedIcon  color={iconColor}/>}
             />
             <ListItemLink
               to="/connections"
               primary={i18n.t("mainDrawer.listItems.connections")}
               icon={
                 <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
-                  <SyncAltIcon />
+                  <SyncAltIcon  color={iconColor} />
                 </Badge>
               }
             />
             <ListItemLink
               to="/settings"
               primary={i18n.t("mainDrawer.listItems.settings")}
-              icon={<SettingsOutlinedIcon />}
+              icon={<SettingsOutlinedIcon  color={iconColor}/>}
             />
           </>
         )}

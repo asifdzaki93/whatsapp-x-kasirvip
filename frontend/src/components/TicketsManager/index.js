@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
   tabsHeader: {
     flex: "none",
-    backgroundColor: "#eee",
+    backgroundColor: theme.palette.background.default,
   },
 
   settingsIcon: {
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "#fafafa",
+    backgroundColor: theme.palette.background.default,
     padding: theme.spacing(1),
   },
 

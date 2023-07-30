@@ -57,10 +57,11 @@ const ProductDialog = ({ inputMessage, setInputMessage }) => {
 	};
 
 
-  //let otherApiToken = settings && settings.length > 0 && getSettingValue("otherApiToken");
+
+  //const otherApiToken = settings && settings.length > 0 && getSettingValue("otherApiToken");
   let ApiToken = `c910eae7e30da15a60e2cbebea6fabd0`;
   
-  const url = `https://zieda.id/pro/geten/product/cari.php?key=${ApiToken}&search=`
+  let url = `https://zieda.id/pro/geten/product/cari.php?key=${ApiToken}&search=`
   const fetchProducts = useCallback(debounce((searchTerm) => {
     const API_URL = `${url}${searchTerm}`;
     axios.get(API_URL)

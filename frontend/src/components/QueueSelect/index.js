@@ -43,6 +43,7 @@ const QueueSelect = ({ selectedQueueIds, onChange }) => {
 			<FormControl fullWidth margin="dense" variant="outlined">
 				<InputLabel>{i18n.t("queueSelect.inputLabel")}</InputLabel>
 				<Select
+				variant="filled"
 					multiple
 					labelWidth={60}
 					value={selectedQueueIds}

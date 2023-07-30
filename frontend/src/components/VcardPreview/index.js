@@ -78,7 +78,7 @@ const VcardPreview = ({ contact, numbers }) => {
                             color="primary"
                             onClick={handleNewChat}
                             disabled={!selectedContact.number}
-                        >Conversar</Button>
+                        >Hubungi</Button>
                     </Grid>
                 </Grid>
             </div>

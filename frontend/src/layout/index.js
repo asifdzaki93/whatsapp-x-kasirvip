@@ -24,6 +24,7 @@ import UserModal from "../components/UserModal";
 import { AuthContext } from "../context/Auth/AuthContext";
 import BackdropLoading from "../components/BackdropLoading";
 import { i18n } from "../translate/i18n";
+import { ThemeSwitch } from "../ThemeContext";
 
 const drawerWidth = 240;
 
@@ -36,6 +37,16 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  logo: {
+    display: 'flex',
+    alignItems: 'center', // keep center logo
+    justifyContent: "flex-start",
+    padding: "2px",
+  },
+  logoImage: {
+    height: 45,
+    marginRight: theme.spacing(3), // Tambahkan margin kiri agar logo tidak terlalu dekat dengan tombol ChevronLeftIcon
+  },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
   },
@@ -121,7 +132,7 @@ const LoggedInLayout = ({ children }) => {
 
   useEffect(() => {
     if (document.body.offsetWidth > 600) {
-      setDrawerOpen(true);
+      setDrawerOpen(false);
     }
   }, []);
 
@@ -177,6 +188,12 @@ const LoggedInLayout = ({ children }) => {
         open={drawerOpen}
       >
         <div className={classes.toolbarIcon}>
+          <div className={classes.logo}>
+            <img src="https://zieda.id/cdn/assets/img/logo-20210306140751.png" 
+            alt="Logo" 
+            height="40" 
+            className={classes.logoImage}/>
+          </div>
           <IconButton onClick={() => setDrawerOpen(!drawerOpen)}>
             <ChevronLeftIcon />
           </IconButton>
@@ -253,6 +270,8 @@ const LoggedInLayout = ({ children }) => {
                 {i18n.t("mainDrawer.appBar.user.logout")}
               </MenuItem>
             </Menu>
+            <ThemeSwitch/>
+
           </div>
         </Toolbar>
       </AppBar>

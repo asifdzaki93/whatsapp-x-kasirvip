@@ -11,7 +11,7 @@ import DeleteContactService from "../services/ContactServices/DeleteContactServi
 import CheckContactNumber from "../services/WbotServices/CheckNumber"
 import CheckIsValidContact from "../services/WbotServices/CheckIsValidContact";
 import GetProfilePicUrl from "../services/WbotServices/GetProfilePicUrl";
-import AppError from "../errors/AppError";
+import AppError from "../../src/errors/AppError";
 import GetContactService from "../services/ContactServices/GetContactService";
 
 type IndexQuery = {

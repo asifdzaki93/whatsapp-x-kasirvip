@@ -13,7 +13,7 @@ import Hidden from "@material-ui/core/Hidden";
 const useStyles = makeStyles((theme) => ({
   chatContainer: {
     flex: 1,
-    // // backgroundColor: "#eee",
+    // // backgroundColor: theme.palette.background.default,
     // padding: theme.spacing(4),
     height: `calc(100% - 48px)`,
     overflowY: "hidden",
@@ -46,13 +46,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   welcomeMsg: {
-    backgroundColor: "#eee",
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
     height: "100%",
     textAlign: "center",
     borderRadius: 0,
+    backgroundColor: theme.palette.background.default,
   },
   ticketsManager: {},
   ticketsManagerClosed: {

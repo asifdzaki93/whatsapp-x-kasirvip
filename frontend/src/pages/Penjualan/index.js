@@ -11,11 +11,18 @@ import useTickets from "../../hooks/useTickets"
 import { AuthContext } from "../../context/Auth/AuthContext";
 
 import Chart from "./Chart"
+import Coba from "./Coba"
+import Deposits from "./Deposit"
+import SimpleTabs from "./SimpleTab"
+import SimpleTooltips from "./SimpleTooltips"
+// import FullWidthTabs from "./Swipeable"
+// import MaterialUIPickers from "./MaterialUIPickers"
 
 const useStyles = makeStyles(theme => ({
 	container: {
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
+		backgroundColor: theme.palette.background.default,
 	},
 	fixedHeightPaper: {
 		padding: theme.spacing(2),
@@ -120,16 +127,23 @@ const Penjualan = () => {
 					</Grid>
 					<Grid item xs={4}>
 						<Paper className={classes.fixedHeightPaper}>
-xxxxxxxxxxxxxx
+<Deposits/>
 						</Paper>
 					</Grid>
 					<Grid item xs={8}>
 						<Paper className={classes.fixedHeightPaper}>
-xxxxxxxxxxxxxx
+<Coba/>
 						</Paper>
+					</Grid>
+					<Grid item xs={12} >
+						<Paper elevation={3}>
+							<SimpleTabs/>
+						</Paper>
+{/* <MaterialUIPickers/> */}
 					</Grid>
 				</Grid>
 			</Container>
+			<SimpleTooltips/>
 		</div>
 	)
 }

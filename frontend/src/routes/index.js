@@ -14,6 +14,11 @@ import Users from "../pages/Users";
 import KasirVip from "../pages/KasirVip";
 import Penjualan from "../pages/Penjualan";
 import Test from "../pages/Test";
+import Schedules from "../pages/Schedules/";
+import SendMassMessage from "../pages/SendMassMessage";
+import SettingMessage from "../pages/SettingMessage";
+import ShippingReport from "../pages/ShippingReport";
+import Tags from "../pages/Tags/";
 
 
 import Contacts from "../pages/Contacts/";
@@ -50,6 +55,12 @@ const Routes = () => {
               <Route exact path="/KasirVip" component={KasirVip} isPrivate />
               <Route exact path="/Penjualan" component={Penjualan} isPrivate />
               <Route exact path="/Test" component={Test} isPrivate />
+              <Route exact path="/tags" component={Tags} isPrivate />
+              <Route exact path="/schedules" component={Schedules} isPrivate />
+              <Route exact path="/BulkMessage" component={SendMassMessage} isPrivate />
+              <Route exact path="/ShippingReport" component={ShippingReport} isPrivate />
+              <Route exact path="/SettingsMessage" component={SettingMessage} isPrivate />
+
               <Route
                 exact
                 path="/quickAnswers"

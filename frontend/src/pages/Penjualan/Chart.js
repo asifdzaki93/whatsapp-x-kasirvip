@@ -54,9 +54,7 @@ const Chart = () => {
 
 	return (
 		<React.Fragment>
-			<Title>{`${i18n.t("dashboard.charts.perDay.title")}${
-				tickets.length
-			}`}</Title>
+			<Title>Grafik Keuangan Harian</Title>
 			<ResponsiveContainer>
 				<BarChart
 					data={chartData}

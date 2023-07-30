@@ -17,9 +17,7 @@ const useStyles = makeStyles(theme => ({
 	root: {
 		display: "flex",
 		alignItems: "center",
-		padding: theme.spacing(8, 8, 3),
 	},
-
 	paper: {
 		padding: theme.spacing(2),
 		display: "flex",
